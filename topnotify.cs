@@ -79,7 +79,7 @@ public class Program {
             if (System.AppDomain.CurrentDomain.FriendlyName == "topleft.exe"){
                 //Sets to top left (easy peasy)
                 //50PX Y offset to make the spacing even
-                SetWindowPos(hwnd, 0, 0, -50, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_SHOWWINDOW);
+                SetWindowPos(hwnd, 0, 0, 15, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_SHOWWINDOW);
             }
             else if (System.AppDomain.CurrentDomain.FriendlyName == "topright.exe"){
                 //Sets to top right (not as easy)
@@ -92,7 +92,7 @@ public class Program {
 			    NotifyRect.Height = NotifyRect.Height - NotifyRect.Y;
 
                 //50PX Y offset to make the spacing even
-                SetWindowPos(hwnd, 0, Screen.PrimaryScreen.Bounds.Width - NotifyRect.Width, -50, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_SHOWWINDOW);
+                SetWindowPos(hwnd, 0, Screen.PrimaryScreen.Bounds.Width - NotifyRect.Width, 15, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_SHOWWINDOW);
             }
 
             Thread.Sleep(10);
